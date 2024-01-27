@@ -1,4 +1,4 @@
-package T102DArray;
+package T10TwoDArray;
 
 public class L1Matrix {
     public static void main(String[] args) {

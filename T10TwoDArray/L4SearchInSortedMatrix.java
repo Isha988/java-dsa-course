@@ -7,7 +7,7 @@
  * 32 33 39 50 
  */
 
-package T102DArray;
+package T10TwoDArray;
 
 public class L4SearchInSortedMatrix {
 

@@ -1,4 +1,4 @@
-package T102DArray;
+package T10TwoDArray;
 
 public class L2SpiralMatrix {
     public static void main(String[] args) {

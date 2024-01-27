@@ -4,7 +4,7 @@
     Input - int[][] nums = { {1,4,9}, {11,4,3},{2,2,3} };
     Output - 18
  */
-package T102DArray;
+package T10TwoDArray;
 
 public class Q2SumOf2ndRow {
     public static void main(String[] args) {

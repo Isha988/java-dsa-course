@@ -11,7 +11,7 @@
     a12 a22
     a13 a23
  */
-package T102DArray;
+package T10TwoDArray;
 
 public class Q3Transpose {
     public static void main(String[] args) {

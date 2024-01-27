@@ -4,7 +4,7 @@
     Input - int[][] array = { {4,7,8}, {8,8,7 } };
     Output - 2
 */
-package T102DArray;
+package T10TwoDArray;
 
 public class Q1Count7 {
     public static void main(String[] args) {

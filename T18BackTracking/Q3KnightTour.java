@@ -2,36 +2,38 @@ package T18BackTracking;
 
 public class Q3KnightTour {
     public static void main(String[] args) {
-        int n = 8;
+        int n = 3;
         int[][] board = new int[n][n];
         knightTour(board, 1, 0, 0);
-        printMatrix(board);
+        // printMatrix(board);
     }
 
-    static final int [][]knightMoves = {
-        {2, 2, -2, -2, 1, 1, -1, -1}, // row moves
-        {1, -1, 1, -1, 2, -2, 2, -2}, // col moves
-    }; 
-    static boolean knightTour(int[][] board, int move, int i, int j){
-        if(move == board.length * board.length){
+    static void knightTour(int[][] board, int move, int i, int j){
+        if(move == board.length * board.length + 1){
+            System.out.println("reached");
             // board[i][j] = board.length * board.length - 1;
-            return true;
+            // System.out.println("---------------------------");
+            // printMatrix(board);
+            // System.out.println("---------------------------");
+            return;
         }
 
         // return if reached out of board or already visited cell
         if(i < 0 || j < 0 || i >= board.length || j >= board.length || board[i][j] != 0){
-            return false;
+            return;
         }
 
         board[i][j] = move; // marked cell
-        for(int k = 0; k < knightMoves[0].length; k++){
-            if(knightTour(board, move + 1, i + knightMoves[0][k], j + knightMoves[1][k])){
-                return true;
-            };
-        }
+        knightTour(board, move + 1, i + 2, j - 1);
+        knightTour(board, move + 1, i + 2, j + 1);
+        knightTour(board, move + 1, i - 2, j - 1);
+        knightTour(board, move + 1, i - 2, j + 1);
+        knightTour(board, move + 1, i - 1, j + 2);
+        knightTour(board, move + 1, i + 1, j + 2);
+        knightTour(board, move + 1, i - 1, j - 2);
+        knightTour(board, move + 1, i + 1, j - 2);
         board[i][j] = 0; // unmarked cell
 
-        return false;
     }
 
     static void printMatrix(int[][] matrix){

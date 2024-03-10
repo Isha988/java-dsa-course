@@ -1,3 +1,23 @@
+/**
+ * eg 
+        //      1
+        //     / \
+        //    2   3
+        //   / \   \
+        //  4   5   6 
+        ans = 4 2 1 3 6 
+
+        //          1
+        //         / \
+        //        2   3
+        //         \
+        //          4
+        //           \
+        //            5
+        //             \
+        //              6
+        ans = 2 1 3 6
+ */
 package T27BinaryTree2;
 
 import java.util.HashMap;
